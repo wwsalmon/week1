@@ -1,6 +1,9 @@
 export default function Index() {
     return (
         <>
+            <div id="navbar">
+                <span>Samson Zhang</span>
+            </div>
             <div id="container">
                 <div id="top-section">
                     <img src="/prof.jpg" alt="Picture of Samson" id="prof-pic"/>
@@ -22,6 +25,7 @@ export default function Index() {
                         <img src="/covid.png" alt="Screenshot of COVID tracker" />
                         <h2>TSL COVID Tracker</h2>
                         <p>Website that aggregates COVID data across the 5C schools and displays them in one central dashboard</p>
+                        <div className="badge"><span>Webapp</span></div>
                     </div>
                 </a>
                 <a href="https://postulate.us/" className="project-wrapper">
