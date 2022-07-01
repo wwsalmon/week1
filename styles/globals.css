@@ -150,3 +150,22 @@ hr {
         display: flex;
     }
 }
+
+#project-page-top {
+    text-align: center;
+    margin-top: 32px;
+}
+
+#project-page-top h1 {
+    font-weight: 700;
+}
+
+#project-page-top p {
+    text-align: center;
+    opacity: 0.5;
+}
+
+#project-page-top img {
+    width: 100%;
+    margin: 48px 0;
+}

@@ -1,3 +1,7 @@
+import Project from "../components/Project";
+import projects from "../data/projects";
+import ReactTypingEffect from "react-typing-effect";
+
 export default function Index() {
     return (
         <>
@@ -7,7 +11,8 @@ export default function Index() {
             <div id="container">
                 <div id="top-section">
                     <img src="/prof.jpg" alt="Picture of Samson" id="prof-pic"/>
-                    <h1>Hi, nice to meet you!<br/>I'm Samson.</h1>
+                    <h1>Hi, nice to meet you!<br/>I'm <ReactTypingEffect text={["Samson"]}/>.</h1>
+                    
                 </div>
                 <p>
                     I’m a Media Studies and Physics major at Pomona College interested in <b>Asian American and data journalism.</b>
@@ -20,21 +25,15 @@ export default function Index() {
                 </p>
                 <hr/>
                 <p>Some apps I've built</p>
-                <a href="https://covid.tsl.news/" className="project-wrapper">
-                    <div className="project-box">
-                        <img src="/covid.png" alt="Screenshot of COVID tracker" />
-                        <h2>TSL COVID Tracker</h2>
-                        <p>Website that aggregates COVID data across the 5C schools and displays them in one central dashboard</p>
-                        <div className="badge"><span>Webapp</span></div>
-                    </div>
-                </a>
-                <a href="https://postulate.us/" className="project-wrapper">
-                    <div className="project-box">
-                        <img src="/postulate.jpg" alt="Screenshot of Postulate" />
-                        <h2>Postulate</h2>
-                        <p>GitHub for knowledge: a notetaking app for sharing your thoughts, learning, and work with the world.</p>
-                    </div>
-                </a>
+                {projects.map(d => (
+                    <Project
+                        title={d.title}
+                        description={d.description}
+                        link={d.link}
+                        image={d.image}
+                        alt={d.alt}
+                    />
+                ))}
             </div>
         </>
     );
