@@ -1,6 +1,12 @@
+import Head from "next/head";
+
 export default function Index() {
     return (
         <>
+            <Head>
+                <title>Samson's website</title>
+                <meta name="description" content="Welcome to my portfolio"/>
+            </Head>
             <div id="navbar">
                 <span>Samson Zhang</span>
             </div>
